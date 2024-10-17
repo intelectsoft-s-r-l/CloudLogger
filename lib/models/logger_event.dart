@@ -21,6 +21,7 @@ class LoggerEvent extends LoggerEventSourceData {
     required super.os,
     required super.ram,
     required super.companyName,
+    required super.source,
   });
 
   LoggerEvent.fromSourceData(
@@ -30,16 +31,17 @@ class LoggerEvent extends LoggerEventSourceData {
     required this.details,
     required this.logType,
   }) : super(
-          companyID: sourceData.companyID,
-          licenseID: sourceData.licenseID,
-          hostName: sourceData.hostName,
-          entity: sourceData.entity,
-          appVersion: sourceData.appVersion,
-          ip: sourceData.ip,
-          os: sourceData.os,
-          ram: sourceData.ram,
-          companyName: sourceData.companyName,
-        );
+            companyID: sourceData.companyID,
+            licenseID: sourceData.licenseID,
+            hostName: sourceData.hostName,
+            entity: sourceData.entity,
+            appVersion: sourceData.appVersion,
+            ip: sourceData.ip,
+            os: sourceData.os,
+            ram: sourceData.ram,
+            companyName: sourceData.companyName,
+            hdd: sourceData.hdd,
+            source: sourceData.source);
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
