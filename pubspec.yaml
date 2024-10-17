@@ -1,0 +1,21 @@
+name: cloud_logger
+description: "A Flutter package that logs to Intelectsoft cloud request results, exceptions and given messages with details."
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.5.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  api_request_manager:
+    git:
+      url: https://github.com/intelectsoft-s-r-l/APIRequestManager
+      ref: main
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
