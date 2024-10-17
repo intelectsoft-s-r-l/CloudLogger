@@ -11,7 +11,7 @@ class LoggerEventSourceData {
     required this.companyName,
     required this.source,
     this.hdd = '',
-  }) : date = DateTime.now();
+  });
 
   int? companyID;
   String? companyName;
@@ -24,5 +24,4 @@ class LoggerEventSourceData {
   String? ram;
   String source;
   String hdd;
-  DateTime date;
 }

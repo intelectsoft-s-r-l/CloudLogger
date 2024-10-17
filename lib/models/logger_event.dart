@@ -6,6 +6,7 @@ class LoggerEvent extends LoggerEventSourceData {
   String? message;
   String? details;
   LogType logType;
+  DateTime date;
 
   LoggerEvent({
     required this.action,
@@ -22,7 +23,7 @@ class LoggerEvent extends LoggerEventSourceData {
     required super.ram,
     required super.companyName,
     required super.source,
-  });
+  }) : date = DateTime.now();
 
   LoggerEvent.fromSourceData(
     LoggerEventSourceData sourceData, {
@@ -30,7 +31,8 @@ class LoggerEvent extends LoggerEventSourceData {
     required this.message,
     required this.details,
     required this.logType,
-  }) : super(
+  })  : date = DateTime.now(),
+        super(
             companyID: sourceData.companyID,
             licenseID: sourceData.licenseID,
             hostName: sourceData.hostName,
