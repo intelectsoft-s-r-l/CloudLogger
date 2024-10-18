@@ -59,7 +59,7 @@ class CloudLogger implements Logger {
           action: action,
           message: 'Called $endpoint with ${isSuccess ? 'success' : 'failure'}',
           details:
-              'The request result: $jsonResult. What I sent as the request body: $body. ${dtoInformation.isEmpty ? '' : 'What i deserialized: $dtoInformation'}',
+              'The request result: $jsonResult. \nWhat I sent as the request body: $body. ${dtoInformation.isEmpty ? '' : '\nWhat i deserialized: $dtoInformation'}',
           isError: !isSuccess);
     } catch (_) {}
   }
